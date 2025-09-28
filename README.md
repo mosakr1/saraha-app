@@ -14,6 +14,14 @@ This project is a web application inspired by the Saraha App, allowing users to 
  * Database: MongoDB, Mongoose ORM
  * Authentication: express-session
  * Deployment: Vercel, MongoDB Atlas
+## DevOps & Deployment Steps
+
+- **Local Development**: Configured `.env` for local environment and installed all dependencies.
+- **Production Setup**: Prepared environment variables (`PORT`, `MONGO_URI`, `SESSION_SECRET`) for deployment.
+- **Database Management**: Used MongoDB Atlas with automatic backups and high availability.
+- **Containerization**: Created `Dockerfile` and `docker-compose.yaml` for portability and easy environment setup.
+- **CI/CD**: Implemented GitHub Actions workflow for automated build and push of Docker images to **GitHub Container Registry (GHCR)**.
+- **Image Registry**: Successfully pushed the Docker image to **GHCR** for future deployment.
 ### Npm Modules 
 
 ```
