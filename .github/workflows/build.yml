@@ -1,0 +1,19 @@
+name: Build Node.js App
+on:
+  workflow_call:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v5.0.0
+      
+      - name: setup node.js
+        uses: actions/setup-node@v5.0.0
+        with:
+          node-version: "18"
+      
+      - name: install dependencies
+        uses: npm install
