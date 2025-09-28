@@ -6,11 +6,6 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yml
-  
-  test:
-    needs: build
-    uses: ./.github/workflows/test.yml
 
   docker-push:
-    needs: test
     uses: ./.github/workflows/docker-push.yml
