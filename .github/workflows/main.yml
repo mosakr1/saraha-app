@@ -1,0 +1,16 @@
+name: CI/CD Saraha-app
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    uses: ./.github/workflow/build.yml
+  
+  test:
+    needs: build
+    uses: ./.github/workflow/test.yml
+
+  docker-push:
+    needs: test
+    uses: ./.github/workflow/docker-push.yml
