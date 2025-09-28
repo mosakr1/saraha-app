@@ -5,12 +5,12 @@ on:
       - main
 jobs:
   build:
-    uses: ./.github/workflows/build.yml@main
+    uses: ./.github/workflows/build.yml
   
   test:
     needs: build
-    uses: ./.github/workflows/test.yml@main
+    uses: ./.github/workflows/test.yml
 
   docker-push:
     needs: test
-    uses: ./.github/workflows/docker-push.yml@main
+    uses: ./.github/workflows/docker-push.yml
